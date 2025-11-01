@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Bio</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <h1>Meet Our Team</h1>
+    <!-- Example team logo -->
+    <img src="img/team-logo.png" alt="Team Logo" class="team-logo">
+
+    <!-- Navigation menu to switch between sections -->
+    <nav>
+        <button onclick="showSection('bios')">Team Bios</button>
+        <button onclick="showSection('vision')">Team Vision</button>
+    </nav>
+</header>
+
+<!-- Team bios section (default section) --><div id="bios" class="container">
+    <!-- Each card represents an individual team member -->
+
+    <div class="card">
+        <h2>Joseph Sinski</h2>
+        <p>Struggling CS student</p>
+        <button onclick="toggleBio('bio1')">Show Bio</button>
+        <p id="bio1" class="bio" style="text-indent: 30px; color: red; font-family: 'Times New Roman', serif;">
+            Joseph is a CS student who wishes he chose a different major but is too deep in to change it.<br>
+            <img src="img/crying emoji meme.jpg" height="148" width="190" style="filter:none;" alt="Crying emoji meme"/><br>
+            <img src="img/Mood Board Computer Science.png" style="filter:none;" alt="Mood Board"/><br>
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Caroline McGowan</h2>
+        <p>Wannabe Dropout</p>
+        <button onclick="toggleBio('bio2')">Show Bio</button>
+        <p id="bio2" class="bio" style="text-indent: 30px; color: blue; font-family: 'Times New Roman', serif; display: none;">
+            Caroline is a very sad computer science major who wishes she could have majored in business or something. <br>
+            <img src="img/caroline-photo.png" height="150" width="150" style="filter:none; border-radius: 50%;" alt="Caroline McGowan Photo"/><br>
+            <img src="img/tech-moodboard.png" style="filter:none;" alt="Tech Moodboard"/><br>
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Nour Al Deen El Hatto</h2>
+        <p>Front End Developer</p>
+        <button onclick="toggleBio('bio3')">Show Bio</button>
+        <div id="bio3" class="bio" style="display: none;">
+            <img src="img/apple.jpg" alt="nourIMG" class="avatar">
+            <p>In addition to being a computer science student, Nour is also a mathematics student. Nour's current objective is to finish the requirements for his Computer Science degree and fully pursue math.</p>
+            <div class="moodboard">
+                <a href="https://github.com/nelhatto-sudo" target="_blank" rel="noopener">🐙 GitHub</a>
+                <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">🧩 VS Code</a>
+                <a href="https://docs.python.org/3/" target="_blank" rel="noopener">🐍 Python</a>
+                <a href="https://git-scm.com/docs" target="_blank" rel="noopener">🔧 Git Docs</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Caleel Rowe</h2>
+        <p>Tech & Healthcare Explorer</p>
+        <button onclick="toggleBio('bio4')">Show Bio</button>
+
+        <div id="bio4" class="bio" style="text-indent: 30px; color: white; font-family: 'Times New Roman', serif; display: none;">
+            <p>
+                Caleel is a computer science student exploring unique paths that blend technology and healthcare.
+                Inspired by visionaries like <strong>G-Dragon</strong> and <strong>Nipsey Hussle</strong>, he blends creativity and culture into his goals.
+                When not coding, he’s dedicated to <strong>fitness</strong> and relaxation.
+            </p>
+
+            <!-- Moodboard (G-Dragon & Nipsey Hussle only) -->
+            <div style="margin-top: 15px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <img src="img/GD.png" alt="G-Dragon" width="200" height="200" style="border-radius: 10px;">
+                <img src="img/Nip.png" alt="Nipsey Hussle" width="200" height="200" style="border-radius: 10px;">
+            </div>
+
+            <!-- Favorite Resources -->
+            <div style="margin-top: 15px;">
+                <h3 style="color: white;">Favorite Resources</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li>🎥 <a href="https://www.youtube.com" target="_blank">YouTube</a></li>
+                    <li>💻 <a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Team vision/mission statement section (hidden by default) -->
+<div id="vision" class="container" style="display: none;">
+    <h2>Our Mission Statement</h2>
+    <p><u><strong>Our goal</strong></u> is to do the least amount of work for the highest grade</p>
+    <p><u><strong>Our Team Rules</strong></u> are to communicate clearly, effectively, and apply yourself wholly and respectfully. Meeting once a week and providing a meaningful amount of work to the group.</p>
+</div>
+
+<script src="script.js"></script> <!-- Link to external JavaScript file -->
+
+</body>
+</html>
