@@ -3,6 +3,12 @@
  * @param {string} bioId - The ID of the bio section to show or hide
  */
 function toggleBio(bioId) {
+    // hide all bios
+    document.querySelectorAll('.bio').forEach(b => {
+      if (b.id === bioId) return;
+      b.style.display = 'none';
+    });
+
     const bio = document.getElementById(bioId);
     // Toggle between showing and hiding the bio section
     if (bio.style.display === "none" || bio.style.display === "") {
