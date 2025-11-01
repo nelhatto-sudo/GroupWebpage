@@ -24,11 +24,34 @@
 <!-- Team bios section (default section) -->
 <div id="bios" class="container">
     <!-- Each card represents an individual team member -->
+
+    <div class="card">
+        <h2>Joseph Sinski</h2>
+        <p>Struggling CS student</p>
+        <button onclick="toggleBio('bio1')">Show Bio</button>
+        <p id="bio1" class="bio" style="text-indent: 30px; color: red;font-family: 'Times New Roman', serif;">Joseph is a CS student who wishes he chose a different major but is too deep in to change it.<br>
+            <img src="img/crying emoji meme.jpg" height="148" width="190" style="filter:none;" alt="Crying emoji meme"/><br>
+            <img src = "img/Mood Board Computer Science.png" style= "filter:none;" alt="Mood Board"/><br>
+
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Caroline McGowan</h2>
+        <p>Wannabe Dropout</p>
+        <button onclick="toggleBio('bio2')">Show Bio</button>
+        <p id="bio2" class="bio" style="text-indent: 30px; color: blue; font-family: 'Times New Roman', serif; display: none;">
+            Caroline is a very sad computer science major who wishes she could have majored in business or something. <br>
+            <img src="img/caroline-photo.png" height="150" width="150" style="filter:none; border-radius: 50%;" alt="Caroline McGowan Photo"/><br>
+            <img src="img/tech-moodboard.png" style="filter:none;" alt="Tech Moodboard"/><br>
+        </p>
+    </div>
+
     <div class="card">
         <h2>Nour Al Deen El Hatto</h2>
         <p>Front End Developer</p>
-        <button onclick="toggleBio('bio1')">Show Bio</button>
-        <div id="bio1" class="bio">
+        <button onclick="toggleBio('bio3')">Show Bio</button>
+        <div id="bio3" class="bio">
             <img src="img/apple.jpg" alt="nourIMG" class="avatar">
             <p>In addition to being a computer science student, Nour is also a mathematics student. Nour's current objective is to finish the requirements for his Computer Science degree and fully pursue math.</p>
             <div class="moodboard">
@@ -38,26 +61,15 @@
               <a href="https://git-scm.com/docs" target="_blank" rel="noopener">🔧 Git Docs</a>
             </div>
         </div>
+    </div>
 
-    </div>
-    <div class="card">
-        <h2>Jane Smith</h2>
-        <p>Backend Developer</p>
-        <button onclick="toggleBio('bio2')">Show Bio</button>
-        <p id="bio2" class="bio">Jane is a backend developer specializing in server-side logic and database management.</p>
-    </div>
-    <div class="card">
-        <h2>Emily Johnson</h2>
-        <p>UI/UX Designer</p>
-        <button onclick="toggleBio('bio3')">Show Bio</button>
-        <p id="bio3" class="bio">Emily is a UI/UX designer with a passion for creating user-friendly interfaces.</p>
-    </div>
 </div>
 
 <!-- Team vision/mission statement section (hidden by default) -->
 <div id="vision" class="container" style="display: none;">
     <h2>Our Mission Statement</h2>
-    <p>We strive to create a collaborative, inclusive, and innovative environment where team members feel empowered to push boundaries and achieve excellence in their craft. Our mission is to deliver high-quality solutions that meet and exceed our clients' expectations.</p>
+    <p><u><strong>Our goal</strong></u> is to do the least amount of work for the highest grade</p>
+    <p><u><strong>Our Team Rules</strong></u> are to communicate clearly, effectively, and apply yourself wholly and respectfully. Meeting once a week and providing a meaningful amount of work to the group.</p>
 </div>
 
 <script src="script.js"></script> <!-- Link to external JavaScript file -->
