@@ -1,0 +1,189 @@
+/* General page styling */
+:root{
+  --mint-100: #a0ffe3;
+  --mint-500: #65dc98;
+  --stone-400:#8d8980;
+  --plum-600:#575267;
+  --ink-900: #222035;
+
+  /* derived */
+  --bg: linear-gradient(160deg, var(--ink-900) 0%, var(--plum-600) 100%);
+  --text: #e7e9ee;
+}
+
+html, body { height: 100%; }
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, header nav button, button{
+  font-family: "JetBrains Mono", Consolas, "Liberation Mono", Menlo, monospace;
+  letter-spacing: .3px;
+}
+
+/* Header section styling */
+header {
+    background: transparent;
+    border-bottom: 1px solid color-mix(in oklab, var(--mint-500) 30%, transparent);
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1{
+  color: var(--mint-100);
+  text-shadow: 0 0 8px color-mix(in oklab, var(--mint-500) 65%, transparent);
+}
+
+/* Styling for team logo image */
+.team-logo {
+    width: 150px; /* Adjust the size as needed */
+    margin-top: 10px;
+    border-radius: 16px;
+}
+
+.bio img {
+    width: 150px; /* Adjust the size as needed */
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+/* Menu button styling */
+header nav {
+    margin-top: 10px;
+}
+
+header nav button {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+header nav button:hover {
+    background: #0056b3;
+}
+
+/* Flex container for team bios and vision sections */
+.container {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Card styling for individual team bios */
+.card {
+    background: color-mix(in oklab, var(--ink-900) 75%, #0000);
+    border: 1px solid color-mix(in oklab, var(--plum-600) 60%, transparent);
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.35),
+              0 0 0 1px color-mix(in oklab, var(--ink-900) 40%, transparent) inset;
+    color: var(--text);
+    transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+
+    margin: 10px;
+    padding: 20px;
+    flex: 1 1 calc(30% - 40px);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(0,0,0,.45),
+              0 0 16px color-mix(in oklab, var(--mint-500) 25%, transparent);
+    border-color: color-mix(in oklab, var(--mint-500) 40%, transparent);
+}
+
+h2 {
+    color: var(--ink);
+    border-bottom: 2px solid rgba(0,0,0,.06);
+    padding-bottom: .35rem;
+    margin-bottom: .75rem;
+    margin: 0 0 10px;
+}
+
+.card h2{
+  color: var(--mint-100);
+  border-bottom: 1px solid color-mix(in oklab, var(--plum-600) 50%, transparent);
+  padding-bottom: .4rem;
+}
+
+/* Initially hide bio details */
+.bio {
+    display: none;
+    margin-top: 10px;
+    color: color-mix(in oklab, var(--text) 85%, var(--stone-400));
+}
+
+/* Button styling */
+button, header nav button{
+  background: var(--mint-500);
+  color: #07130f;
+  border-radius: 999px;
+  border: 0;
+  padding: 10px 16px;
+  cursor: pointer;
+  box-shadow: 0 0 0 2px color-mix(in oklab, var(--mint-500) 40%, transparent) inset,
+              0 0 12px color-mix(in oklab, var(--mint-500) 45%, transparent);
+  transition: transform .06s ease, filter .15s ease;
+}
+
+button {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3c339a;
+}
+
+/* Minimal moodboard */
+.moodboard {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.moodboard a{
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding: 8px 10px;
+  border-radius: 10px;
+  color: var(--text);
+  border: 1px solid color-mix(in oklab, var(--plum-600) 60%, transparent);
+  background: color-mix(in oklab, var(--ink-900) 70%, #0000);
+  transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+}
+
+.moodboard a:hover{
+  transform: translateY(-1px);
+  border-color: var(--mint-500);
+  box-shadow: 0 0 12px color-mix(in oklab, var(--mint-500) 35%, transparent);
+}
+
+#vision h2{ color: var(--mint-100); }
+
+#vision p{
+  background: color-mix(in oklab, var(--ink-900) 70%, #0000);
+  border-left: 4px solid var(--mint-500);
+  padding: 12px 14px;
+  border-radius: 10px;
+  color: var(--text);
+}
